@@ -11,7 +11,9 @@ class ProxyGenController < ApplicationController
     @ismalformed = false
     @links = Array.new
     deck.each_line do |line|
-
+        if (line.length <= 2)
+            next
+        end
         val = line.split(" ", 2)[0].to_i
         card = line.split(" ", 2)[1].gsub(" ", "%20")
         if (val == 0)
