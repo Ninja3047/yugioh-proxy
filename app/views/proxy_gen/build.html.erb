@@ -1,0 +1,12 @@
+
+<% if @ismalformed %>
+    <p> The following lines are now formatted correctly:</p>
+    <% @bad_cards.each_line do |line| %>
+        <%= line %>
+    <% end %>
+
+<% end %>
+
+<% @links.each do |ent| %>
+    <%= image_tag ent %> 
+<% end %>

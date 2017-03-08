@@ -1,0 +1,2 @@
+module ProxyGenHelper
+end
